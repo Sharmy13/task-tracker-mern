@@ -1,0 +1,20 @@
+body{
+    background:#eef2f7;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.card{
+    border-radius:18px;
+}
+
+button{
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.03);
+}
+
+textarea{
+    resize:none;
+}
