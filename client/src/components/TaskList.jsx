@@ -28,7 +28,7 @@ function TaskList({ refresh, setEditTask, search }) {
     }
   };
   const filteredTasks = tasks.filter((task) =>
-  task.title.toLowerCase().includes(search.toLowerCase())
+  task.title.toLowerCase().includes((search || "").toLowerCase())
 );
 return (
   <div>
