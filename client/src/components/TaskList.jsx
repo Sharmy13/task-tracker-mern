@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import API from "../services/api";
 
-function TaskList({ refresh, setEditTask }) {
+function TaskList({ refresh, setEditTask, search }) {
   const [tasks, setTasks] = useState([]);
 
   useEffect(() => {
@@ -27,6 +27,9 @@ function TaskList({ refresh, setEditTask }) {
       alert("Error deleting task");
     }
   };
+  const filteredTasks = tasks.filter((task) =>
+  task.title.toLowerCase().includes(search.toLowerCase())
+);
 return (
   <div>
 
@@ -37,7 +40,7 @@ return (
         No Tasks Found
       </div>
     ) : (
-      tasks.map((task) => (
+      filteredTasks.map((task) => (
         <div
           key={task._id}
           className="card mb-3 shadow-sm"
