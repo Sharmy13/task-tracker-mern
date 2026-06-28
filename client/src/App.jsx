@@ -17,27 +17,18 @@ function App() {
 
   return (
     <div
-      className={`container py-5 ${
-        darkMode ? "bg-dark text-light" : ""
-      }`}
-      style={{
-        minHeight: "100vh",
-      }}
+      className={`container py-5 ${darkMode ? "bg-dark text-light" : ""}`}
+      style={{ minHeight: "100vh" }}
     >
       <div className="row justify-content-center">
         <div className="col-lg-8">
-
           <div
             className={`card shadow-lg p-4 ${
               darkMode ? "bg-secondary text-light" : ""
             }`}
           >
-
             <div className="d-flex justify-content-between align-items-center mb-3">
-
-              <h1 className="text-primary">
-                📋 Task Tracker
-              </h1>
+              <h1 className="text-primary">📋 Task Tracker</h1>
 
               <button
                 className="btn btn-outline-primary"
@@ -45,7 +36,6 @@ function App() {
               >
                 {darkMode ? "☀️ Light Mode" : "🌙 Dark Mode"}
               </button>
-
             </div>
 
             <TaskForm
@@ -60,9 +50,7 @@ function App() {
               refresh={refresh}
               setEditTask={setEditTask}
             />
-
           </div>
-
         </div>
       </div>
     </div>
